@@ -7,5 +7,4 @@ urlpatterns = [
     path('new/', person_create, name='person_create'),
     path('update/<int:id>/', person_update, name='person_update'),
     path('delete/<int:id>/', person_delete, name='person_delete'),
-
 ]
