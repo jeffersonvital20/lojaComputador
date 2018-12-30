@@ -56,7 +56,7 @@ ROOT_URLCONF = 'gestaoBeta.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'gestaoBeta.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
+        'NAME': 'gestaoBeta',
+        'USER': 'postgres',
+        'PASSWORD': 'admin123',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -136,5 +136,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = 'media'
 
-LOGIN_URL = ''
+LOGIN_URL = 'login/'
+
+LOGIN_REDIRECT_URL = 'home'
 
